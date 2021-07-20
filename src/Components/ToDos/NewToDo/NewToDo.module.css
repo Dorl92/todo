@@ -1,0 +1,70 @@
+.Boxdark {
+    width: 550px;
+    height: 50px;
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    margin: 0px auto 0px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.Boxlight {
+    width: 550px;
+    height: 50px;
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    margin: 0px auto 0px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.Checkdark {
+    width: 25px;
+    height: 25px;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    margin: 11.5px 16.25px;
+    display: flex;
+    align-items: center;
+}
+
+.Checklight {
+    width: 25px;
+    height: 25px;
+    border: 1px solid hsl(233, 11%, 84%);
+    border-radius: 50%;
+    margin: 11.5px 16.25px;
+    display: flex;
+    align-items: center;
+}
+
+.ToDo {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.Inputdark {
+    border: none;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(236, 33%, 92%);
+}
+
+.Inputlight {
+    border: none;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(236, 9%, 61%);
+}
+
+.Inputdark:focus {
+    outline: none;
+}
+
+.Inputlight:focus {
+    outline: none;
+}

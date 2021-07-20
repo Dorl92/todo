@@ -1,0 +1,79 @@
+.Boxdark {
+    width: 550px;
+    height: 50px;
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(236, 33%, 92%);
+    display: flex;
+    margin: 0px auto 0px;
+    border-radius: 4px 4px 0 0;
+    font-size: 18px;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+
+.Boxlight {
+    width: 550px;
+    height: 50px;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(235, 19%, 35%);
+    display: flex;
+    margin: 0px auto 0px;
+    border-radius: 4px 4px 0 0;
+    font-size: 18px;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+
+.ToDo {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.ToDoLine {
+    text-decoration: line-through;
+    color: hsl(234, 11%, 52%);
+}
+
+.Check {
+    width: 25px;
+    height: 25px;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    transition: border 0.5s;
+    cursor: pointer;
+}
+
+.Cross {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    color: hsl(233, 14%, 35%);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.Cross:hover {
+    color: hsl(234, 39%, 85%);
+}
+
+.Check:hover {
+    border: 1px solid hsl(280, 87%, 65%);
+}
+
+.isChecked {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    margin: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Vicon {
+    margin: auto;
+}

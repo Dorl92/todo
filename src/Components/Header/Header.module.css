@@ -1,0 +1,32 @@
+.HeaderDark {
+    width: 100%;
+    height: 200px;
+    background-image: url('../../images/bg-mobile-dark.jpg');
+}
+
+.HeaderLight {
+    width: 100%;
+    height: 200px;
+    background-image: url('../../images/bg-mobile-light.jpg');
+}
+
+@media(min-width: 375px) {
+    .HeaderDark {
+        height: 300px;
+        background-image: url('../../images/bg-desktop-dark.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media(min-width: 375px) {
+    .HeaderLight {
+        height: 300px;
+        background-image: url('../../images/bg-desktop-light.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+

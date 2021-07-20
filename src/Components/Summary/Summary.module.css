@@ -1,0 +1,93 @@
+.Boxdark {
+    width: 550px;
+    height: 50px;
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    margin: 0px auto 0px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.Boxlight {
+    width: 550px;
+    height: 50px;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0px 3px 25px hsl(236, 33%, 92%);
+    display: flex;
+    margin: 0 auto 0px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.ToDoLeft {
+    width: 33%;
+    color: hsl(233, 14%, 35%);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.Buttons {
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+
+.Buttondark {
+    border: none;
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(233, 14%, 35%);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.Buttonlight {
+    border: none;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(233, 14%, 35%);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.ButtonClear {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px;
+}
+
+.ButtonClear:hover {
+    color: hsl(236, 33%, 92%);
+}
+
+.ButtonClear:focus {
+    outline: none;
+}
+
+.ButtonClear:active {
+    color: hsl(220, 98%, 61%);
+}
+
+.Button:hover {
+    color: hsl(236, 33%, 92%);
+}
+
+.Buttondark:focus {
+    outline: none;
+}
+
+.Buttonlight:focus {
+    outline: none;
+}
+
+.Button:active {
+    color: hsl(220, 98%, 61%);
+}
