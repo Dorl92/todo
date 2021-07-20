@@ -4,21 +4,17 @@ import Vicon from '../../../images/icon-check.svg';
 
 class ToDo extends Component {
     checkToDoHandle = () => {
-        this.props.checkChangeHandler(this.props.index)
+        this.props.checkChangeHandler(this.props.id)
     }
 
     onCrossClickHandler = () => {
-        this.props.removeToDoHandler(this.props.index);
+        this.props.removeToDoHandler(this.props.id);
     } 
 
     render() {
         let boxTheme = `${classes.Boxdark}`;
-        // let checkTheme = `${classes.Checkdark}`;
-        // let inputTheme = `${classes.Inputdark}`;
         if (this.props.theme === 'light'){
              boxTheme = `${classes.Boxlight}`;
-            //  checkTheme = `${classes.Checklight}`;
-            //  inputTheme = `${classes.Inputlight}`;
         }
         let checkCircle = `${classes.Check}`;
         let toDo = `${classes.ToDo}`;

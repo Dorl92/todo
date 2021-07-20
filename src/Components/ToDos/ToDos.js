@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import ToDo from './ToDo/ToDo';
@@ -19,27 +20,25 @@ class ToDos extends Component {
             return null;
         } else {
             let toDoList = [...this.state.allToDo];
-            toDoList.push({ text: newToDo, isChecked: false });
+            toDoList.push({ id: uuidv4(), text: newToDo, isChecked: false });
             this.setState({ allToDo: toDoList })
         }
 
     }
-    removeToDoHandler = (index) => {
-        console.log(index)
-        let toDoList = [...this.state.allToDo];
-        toDoList.splice(index, 1);
-        this.setState({ allToDo: toDoList })
+    removeToDoHandler = (id) => {
+        let updatedTodos = this.state.allToDo.filter(todo => todo.id !== id);
+        this.setState({ allToDo: updatedTodos })
     }
     removeAllCompletedHandler = () => {
         let toDoList = [...this.state.allToDo];
         let activeToDo = toDoList.filter((toDo) => !toDo.isChecked);
         this.setState({ allToDo: activeToDo })
     }
-    isCompletedHandler = (index) => {
-        let toDoList = [...this.state.allToDo];
-        let toDo = toDoList[index];
-        toDo.isChecked = !toDo.isChecked;
-        this.setState({ allToDo: toDoList })
+    isCompletedHandler = (id) => {
+        let updatedTodos = this.state.allToDo.map(todo => 
+            todo.id === id ? {...todo, isChecked: !todo.isChecked} : todo
+            )
+        this.setState({allToDo: updatedTodos})
     }
 
     showAllHandler = () => {
@@ -91,12 +90,12 @@ class ToDos extends Component {
                 <NewToDo handleEnterPressed={this.onEnterPress} theme={theme} />
                 <div className={classes.ToDos}>
                     <TransitionGroup>
-                        {toDosList.map((todo, index) => (
-                            <CSSTransition key={index} timeout={300} classNames="fade">
+                        {toDosList.slice(0).reverse().map(todo => (
+                            <CSSTransition key={todo.id} timeout={300} classNames="fade">
                                 <ToDo
                                     isChecked={todo.isChecked}
                                     toDoData={todo.text}
-                                    index={index}
+                                    id={todo.id}
                                     removeToDoHandler={this.removeToDoHandler}
                                     checkChangeHandler={this.isCompletedHandler}
                                     theme={theme}

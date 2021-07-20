@@ -2,11 +2,13 @@
   height: 100vh;
   text-align: center;
   background-color: hsl(235, 21%, 11%);
+  transition: all 0.3s ease;
 }
 
 .App-light{
   height: 100vh;
   text-align: center;
   background-color: hsl(0, 0%, 98%);
+  transition: all 0.3s ease;
 }
 

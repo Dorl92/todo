@@ -58,13 +58,13 @@
     font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
     background-color: hsl(0, 0%, 98%);
-    color: hsl(236, 9%, 61%);
+    color: hsl(233, 14%, 35%);
 }
 
 .Inputdark:focus {
     outline: none;
 }
 
-.Inputlight:focus {
+.Inputlight:focus { 
     outline: none;
 }
