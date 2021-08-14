@@ -106,6 +106,7 @@ class ToDos extends Component {
                 </div>
                 <Summary
                     toDoCounter={this.state.allToDo.length}
+                    mode={this.state.mode}
                     removeAllCompletedHandler={this.removeAllCompletedHandler}
                     showActiveHandler={this.showActiveHandler}
                     showAllHandler={this.showAllHandler}

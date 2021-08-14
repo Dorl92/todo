@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './Summary.module.css';
 
 class Summary extends Component {
+
     onClickHandler = () => {
         this.props.removeAllCompletedHandler();
     }
@@ -14,15 +15,17 @@ class Summary extends Component {
     completedClickHandle = () => {
         this.props.showCompletedHandler();
     }
+    generateClassName = () => {
+
+    };
+
     render() {
+
         let boxTheme = `${classes.Boxdark}`;
         let buttonTheme = `${classes.Buttondark}`;
-        // let inputTheme = `${classes.Inputdark}`;
-        if (this.props.theme === 'light'){
-             boxTheme = `${classes.Boxlight}`;
-             buttonTheme = `${classes.Buttonlight}`;
-            //  checkTheme = `${classes.Checklight}`;
-            //  inputTheme = `${classes.Inputlight}`;
+        if (this.props.theme === 'light') {
+            boxTheme = `${classes.Boxlight}`;
+            buttonTheme = `${classes.Buttonlight}`;
         }
         return (
             <div className={boxTheme}>
@@ -30,9 +33,9 @@ class Summary extends Component {
                     {this.props.toDoCounter} items left
                 </div>
                 <div className={classes.Buttons}>
-                    <button className={buttonTheme} onClick={this.allClickHandle}>All</button>
-                    <button className={buttonTheme} onClick={this.activeClickHandle}>Active</button>
-                    <button className={buttonTheme} onClick={this.completedClickHandle}>Completed</button>
+                    <button className={buttonTheme} style={{color: this.props.mode === 'all' && "hsl(233, 13%, 61%)"}} onClick={this.allClickHandle}>All</button>
+                    <button className={buttonTheme} style={{color: this.props.mode === 'active' && "hsl(233, 13%, 61%)"}} onClick={this.activeClickHandle}>Active</button>
+                    <button className={buttonTheme} style={{color: this.props.mode === 'completed' && "hsl(233, 13%, 61%)"}} onClick={this.completedClickHandle}>Completed</button>
                 </div>
                 <div className={classes.ButtonClear}>
                     <button className={buttonTheme} onClick={this.onClickHandler}>Clear Completed</button>

@@ -44,6 +44,8 @@
     font-weight: 700;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
+    transition: all 0.2s ease-in-out;
+
 }
 
 .Buttonlight {
@@ -54,6 +56,7 @@
     font-weight: 700;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
+    transition: all 0.1s ease-in-out;
 }
 
 .ButtonClear {
@@ -64,20 +67,16 @@
     padding: 0 15px;
 }
 
-.ButtonClear:hover {
-    color: hsl(236, 33%, 92%);
+.Buttondark:hover{
+    color: hsl(233, 13%, 61%);
+}
+
+.Buttonlight:hover{
+    color: hsl(233, 13%, 61%);
 }
 
 .ButtonClear:focus {
     outline: none;
-}
-
-.ButtonClear:active {
-    color: hsl(220, 98%, 61%);
-}
-
-.Button:hover {
-    color: hsl(236, 33%, 92%);
 }
 
 .Buttondark:focus {
@@ -88,6 +87,18 @@
     outline: none;
 }
 
-.Button:active {
+/* .Button:active {
     color: hsl(220, 98%, 61%);
-}
+} */
+
+/* .ButtonClear:active {
+    color: hsl(220, 98%, 61%);
+} */
+
+/* .Button:hover {
+    color: hsl(236, 33%, 92%);
+} */
+
+/* .ButtonClear:hover {
+    color: hsl(236, 33%, 92%);
+} */
